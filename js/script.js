@@ -75,7 +75,7 @@ function pocetna3() {
                 let img = `<img src='../img/collection.jpg'></img>`;
                 document.getElementById('collection').innerHTML = img;    
 
-                let btn = `<button id='btnCollection'>Pogledajte ponudu</button>`;
+                let btn = `<button id='btnCollection' onclick='asortiman()'>Pogledajte ponudu</button>`;
                 document.getElementById('collection').innerHTML += btn;
 }
 
@@ -111,11 +111,120 @@ function oNama1() {
             document.getElementById('containerDiv').innerHTML += title3;
 }
 
+function oNama2() {
+    let divImages = `<div id='divImages'></div>`;
+    document.getElementById('wrapper').innerHTML += divImages;
+
+        let containerImages = `<div id='containerImages' class='container'></div>`;
+        document.getElementById('divImages').innerHTML = containerImages;
+
+            let img1 = `<img src='../img/o-nama-1.jpg'>`;
+            document.getElementById('containerImages').innerHTML = img1;
+
+            let img2 = `<img src='../img/o-nama-2.jpg'>`;
+            document.getElementById('containerImages').innerHTML += img2;
+
+            let img3 = `<img src='../img/o-nama-3.jpg'>`;
+            document.getElementById('containerImages').innerHTML += img3;
+}
+
+function viseONama() {
+    let divViseONama = `<div id='viseONama'></div>`;
+    document.getElementById('wrapper').innerHTML += divViseONama;
+
+        let containerViseONama = `<div id='containerViseONama' class='container'></div>`;
+        document.getElementById('viseONama').innerHTML += containerViseONama;
+
+            let left = `<div id='left'></div>`;
+            document.getElementById('containerViseONama').innerHTML = left;
+
+                let left1 = `<div id='left1'></div>`;
+                document.getElementById('left').innerHTML = left1;
+
+                    let title1 = `<h3>Vise o nama</h3>`;
+                    document.getElementById('left1').innerHTML = title1;
+
+                    let text1 = `<p>Moj_torbicak je porodicna firma iz Kraguejvca. Bavis erucnom izradom zenskih torbica. 
+                    Naša misija se ogleda u stvaranju poverenja i prijateljskih odnosa sa našim kupcima stvarajući za njih samo ono najbolje. 
+                    Porodična prodavnica je isto što i porodica! U ono što pravimo, ulažemo puno ljubavi i šaljemo u svet u tašni, Vama.</p>`;
+                    document.getElementById('left1').innerHTML += text1;
+
+                let left2 = `<div id='left2'></div>`;
+                document.getElementById('left').innerHTML += left2;
+
+                    let title2 = `<h3>Nas asortiman</h3>`;
+                    document.getElementById('left2').innerHTML = title2;
+
+                    let text2 = `<p>Moj_torbicak poseduje veliki asortiman zenskih torbica. Veliki izbor, odlican kvalitet i povoljne cene predstavljaju nase 
+                    glavne odlike. Pozovite nas ili posaljite poruku za sve dodatne informacije, a mi Vam garantujemo da cete biti zadovoljni.</p>`;
+                    document.getElementById('left2').innerHTML += text2;
+
+                let left3 = `<div id='left3'></div>`;
+                document.getElementById('left').innerHTML += left3;
+
+                    let title3 = `<h3>Rucna izrada</h3>`;
+                    document.getElementById('left3').innerHTML = title3;
+
+                    let text3 = `<p>Rucna izrada je ono sti nas cini drugacijim od ostalih. Svaka torbica je pazljivo izradjena do najsitnijih detalja. 
+                    Svakom Vasom kupovinom nam pokazujete da cenite nas rad.</p>`;
+                    document.getElementById('left3').innerHTML += text3;
+
+            let right = `<div id='right'></div>`;
+            document.getElementById('containerViseONama').innerHTML += right;
+
+                let img = `<img src='../img/profile.jpg'>`;
+                document.getElementById('right').innerHTML = img;
+}
 
 function pageONama() {
     wrapper.innerHTML = '';
     oNama1();
+    oNama2();
+    viseONama();
+}
+
+/** Page asortiman */
+const bags = {
+    torbicak1: 'Torbicak1',
+    torbicak2: 'Torbicak2',
+    torbicak3: 'Torbicak3',
+    torbicak4: 'Torbicak4',
+    torbicak5: 'Torbicak5',
+    torbicak6: 'Torbicak6',
+    torbicak7: 'Torbicak7',
+    torbicak8: 'Torbicak8',
+}
+
+function asortiman() {
+    wrapper.innerHTML = '';
+
+        let asortimanDiv = `<div id='asortimanDiv'></div>'`;
+        document.getElementById('wrapper').innerHTML = asortimanDiv;
+
+            let title = `<h2>Izdvajamo iz nase ponude</h2>`;
+            document.getElementById('asortimanDiv').innerHTML = title;
+
+            let asortimanContainer = `<div class='container' id='asortimanContainer'></div>`;
+            document.getElementById('asortimanDiv').innerHTML += asortimanContainer;
+
+                for(let bag in bags) {
+                    let divBag = `<div class='bags' id='${bag}'></div>`;
+                    document.getElementById('asortimanContainer').innerHTML += divBag;
+
+                        let img = `<img src='../img/asortiman/${bag}.jpg'>`;
+                        document.getElementById(`${bag}`).innerHTML += img;
+
+                        let description = `<p>${bags[bag]}<p>`;
+                        document.getElementById(`${bag}`).innerHTML += description;
+                }
+
+                // let arrowLeft = `<span id='arrowLeft'></span>`;
+                // document.getElementById('asortimanContainer').innerHTML += arrowLeft;
+                
+                // let arrowRight = `<span id='arrowRight'></span>`;
+                // document.getElementById('asortimanContainer').innerHTML += arrowRight;
 }
 
 document.getElementById('pocetna').addEventListener('click', pagePocetna);
+document.getElementById('asortiman').addEventListener('click', asortiman);
 document.getElementById('oNama').addEventListener('click', pageONama);
