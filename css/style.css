@@ -4,10 +4,22 @@
     padding: 0;
 }
 
+body {
+    background-color: #fafafa;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+}
+
+h2 {
+    color: #a31f4f;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
 }
 /* Header */
 .header {
@@ -55,7 +67,7 @@
 
 /* Navigation */
 .navigation {
-    background-color: #ad1c5d;
+    background-color: #a31f4f;
     height: 50px;
 }
 
@@ -90,35 +102,179 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 200px);
 }
 
 .showcase .container {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 200px);
     position: relative;
 }
 
 .showcase p {
-    color: #ad1c5d;
+    color: #a31f4f;
     font-size: 50px;
     font-weight: bold;
     position: absolute;
     right: 0;
     top: 50px;
-    /* transform: translate(0, -30%); */
 }
 
 .showcase p span {
     color: #1a0f61;
 }
 
-/* Torbice */
-#torbice p {
-    color: #ad1c5d;
+
+/*******  POCETNA   **********/
+/*Pocetna 1*/
+#pocetna1 {
+    padding: 10px 0;
+}
+
+#pocetna1 .container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+}
+
+#pocetna1 .container div{
+    align-items: center;
+    display: flex;
+}
+
+#pocetna1 span {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 55px;
+    width: 55px;
+}
+
+#family {
+    background-image: url('../img/icons/family.svg');
+}
+
+#handWork {
+    background-image: url('../img/icons/cut.svg');
+}
+
+#bigChoice {
+    background-image: url('../img/icons/bag.svg');
+}
+
+#pocetna1 p {
+    color: #1a0f61;
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+/* Pocetna 2*/
+#pocetna2 {
+    margin: 10px 0;
+}
+
+#preporuka {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#preporuka img {
+    border: 1px solid transparent;
+    display: block;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+#preporuka img:hover {
+    border: 1px solid #a31f4f;
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+/* Pocetna 3*/
+#pocetna3 {
+    background-color: #fafafa;
+    margin: 10px 0;
+}
+
+#collection {
+    height: 600px;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#collection img {
+    max-width: 1200px;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+    width: 100%;
+}
+
+#collection img:hover {
+    max-width: 1200px;
+    transform: scale(1.2);
+    transition: 1s ease-in-out;
+}
+
+#btnCollection {
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btnCollection:hover {
+    background-color: white;
+    border-color: #a31f4f;
+    color: #a31f4f;
+    transition: 0.5s;
+}
+
+/* Page o nama */
+#divONama1 p {
+    color: #a31f4f;
+    text-align: center;
+}
+
+#title1 {
     font-size: 30px;
     font-weight: bold;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
+}
+
+#title2 {
+    font-size: 25px;
+    padding: 30px;
+}
+
+#title3 {
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+#divONama1 span {
+    background-color: #1a0f61;
+    display: block;
+    height: 3px;
+    margin: 0 auto;
+    width: 20%;
+}
+
+
+/* Torbice
+#torbice .container {
+    background-color: white;
 }
 
 .collection {
@@ -128,12 +284,98 @@
 }
 
 .collection img {
-    border: 1px solid #ad1c5d;
+    border: 1px solid #a31f4f;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .collection img:hover {
     opacity: 0.7;
     transition: 1s;
 }
+
+/* O nama */
+/* #o_nama .container {
+    background-color: white;
+    display: flex;
+}
+
+#o_nama .container img {
+    border-radius: 50%;
+    display: block;
+    padding: 10px;
+}
+
+#o_nama .container .text {
+    color: #a31f4f;
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-align: justify;
+}  */
+
+/* Kontakt */
+#contact {
+    background-color: #a31f4f;
+    color: white;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact .container p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.location, .tel {
+    margin: 10px 0;
+}
+
+#contact span {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    margin: 5px auto;
+    width: 20px;
+}
+
+.location span {
+    background-image: url('../img/icons/location.svg');
+
+}
+
+.tel span {
+    background-image: url('../img/icons/phone.svg');
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialMedia {
+    display: flex;
+}
+
+.socialMedia div {
+    margin: 10px;
+}
+
+.facebook span {
+    background-image: url('../img/icons/facebook-white.svg');
+}
+
+.instagram span {
+    background-image: url('../img/icons/instagram-white.svg');
+}
+
+/* Responsive */
